@@ -1,0 +1,162 @@
+<h4>Add Machine List</h4>
+{{board}}
+{{errorMessage}}
+
+<form name="mform" (ngSubmit)="mf.form.valid && onSubmit()" #mf="ngForm" novalidate>
+       
+        <div class="form-group row">
+          <label for="mname" class="col-4 col-form-label">Machine Name</label> 
+          <div class="col-4">
+            <input id="mname" name="mname" [(ngModel)]="mform.mname" #mname="ngModel" required type="text" class="form-control">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="myear" class="col-4 col-form-label">Manufacturing Year</label> 
+          <div class="col-4">
+            <input id="myear" name="myear" [(ngModel)]="mform.myear" #myear="ngModel" required type="text" class="form-control">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="hdate" class="col-4 col-form-label">Handed Over Date</label> 
+          <div class="col-4">
+            <input id="hdate" name="date" [(ngModel)]="mform.date" #date="ngModel" required type="date" class="form-control">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="farea" class="col-4 col-form-label">Fixing Area</label> 
+          <div class="col-4">
+            <input id="farea" name="farea" [(ngModel)]="mform.farea" #farea="ngModel" required type="text" class="form-control">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="mno" class="col-4 col-form-label">Machine No</label> 
+          <div class="col-4">
+            <input id="mno" name="mno" [(ngModel)]="mform.mno" #mno="ngModel" required type="text" class="form-control">
+          </div>
+        </div>
+       
+          <div class="form-group row">
+            <label class="col-4">Manual Received</label> 
+            <div class="col-4">
+              <div class="custom-control custom-radio custom-control-inline">
+                <input name="mflag" [(ngModel)]="mform.mflag" #mflag="ngModel"  id="manual_0" type="radio" class="custom-control-input" value="yes"> 
+                <label for="manual_0" class="custom-control-label">Yes</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input name="mflag" [(ngModel)]="mform.mflag" #mflag="ngModel" id="manual_1" type="radio" class="custom-control-input" value="no"> 
+                <label for="manual_1" class="custom-control-label">No</label>
+              </div>
+            </div>
+          </div>
+        
+        <div class="form-group row">
+          <label for="pressure" class="col-4 col-form-label">Pneumatic Pressure</label> 
+          <div class="col-4">
+            
+              
+                  <select id="pressure" name="pressure" [(ngModel)]="mform.pressure" #pressure="ngModel" class="custom-select">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>
+               
+           
+                  
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input name="pressureoption" [(ngModel)]="mform.pressureoption" id="pressureoption1" #type="ngModel" type="radio" class="custom-control-input" value="Bar"> 
+                        <label for="pressureoption1" class="custom-control-label">BAR</label>
+                      </div>
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input name="pressureoption" [(ngModel)]="mform.pressureoption" #type="ngModel" id="pressureoption2" type="radio" class="custom-control-input" value="Mpa"> 
+                        <label for="pressureoption2" class="custom-control-label">MPA</label>
+                     
+            
+          </div>
+          </div>
+         
+          </div>
+        <h5>Machine Power</h5>
+        <div class="form-group row">
+            <label for="voltage" class="col-4 col-form-label">Voltage</label> 
+            <div class="col-4">
+              <div class="input-group">
+                <input id="voltage" name="voltage" [(ngModel)]="mform.voltage" #voltage="ngModel" required type="text" class="form-control"> 
+                <div class="input-group-append">
+                  <div class="input-group-text">V</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="current" class="col-4 col-form-label">Current</label> 
+            <div class="col-4">
+              <div class="input-group">
+                <input id="current" name="current" [(ngModel)]="mform.current" #current="ngModel" required type="text" class="form-control"> 
+                <div class="input-group-append">
+                  <div class="input-group-text">A</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="ideal" class="col-4 col-form-label">Ideal</label> 
+            <div class="col-4">
+              <div class="input-group">
+                <input id="ideal" name="ideal" [(ngModel)]="mform.ideal" #ideal="ngModel" required type="text" class="form-control"> 
+                <div class="input-group-append">
+                  <div class="input-group-text">A</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+              <label for="duration" class="col-4 col-form-label">PM Duration</label> 
+              <div class="col-4">
+                <div class="input-group">
+                  <input id="duration" name="duration" [(ngModel)]="mform.duration" #duration="ngModel" required type="text" class="form-control"> 
+                  <div class="input-group-append">
+                    <div class="input-group-text">days</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        <div class="form-group row">
+          <label for="text" class="col-4 col-form-label">Last PM date</label> 
+          <div class="col-4">
+            <input id="text" name="pmdate" [(ngModel)]="mform.pmdate" #pmdate="ngModel" required type="date" class="form-control">
+          </div>
+        </div> 
+        <div class="form-group row">
+            <label class="col-4">Type</label> 
+            <div class="col-4">
+              <div class="custom-control custom-radio custom-control-inline">
+                <input name="type" [(ngModel)]="mform.type" id="type_0" #type="ngModel" type="radio" class="custom-control-input" value="Assembly"> 
+                <label for="type_0" class="custom-control-label">Assembly</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input name="type" [(ngModel)]="mform.type" #type="ngModel" id="type_1" type="radio" class="custom-control-input" value="PreAssembly"> 
+                <label for="type_1" class="custom-control-label">PreAssembly</label>
+              </div>
+            </div>
+          </div>
+        <div class="form-group row">
+          <div class="offset-4 col-4">
+            <button name="submit" type="submit" class="btn btn-primary">Submit</button>
+            <div *ngIf="mf.submitted && isAddFailed;else successmsg" class="alert alert-warning">
+              Signup failed!<br/>{{errorMessage}}
+            </div>
+            <ng-template #successmsg>
+              <div class="alert alert-success" *ngIf="!isAddFailed">
+                Machine Added Successfully!<br/>{{errorMessage}}
+              </div>
+            </ng-template>
+          </div>
+        </div>
+      </form>

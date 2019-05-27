@@ -1,0 +1,76 @@
+<h3>Machine List</h3>
+<table class="table table-striped table-bordered" [mfData]="machinedata" #mf="mfDataTable" [mfRowsOnPage]="5">
+    <thead>
+    <tr>
+            <th>
+                    <mfDefaultSorter by="sno">SNO</mfDefaultSorter>
+                </th>
+        <th>
+            <mfDefaultSorter by="mname">Machine Name</mfDefaultSorter>
+        </th>
+        <th>
+            <mfDefaultSorter by="myear">Manufacturing Year </mfDefaultSorter>
+        </th>
+        <th>
+            <mfDefaultSorter by="date">Handed Over Date</mfDefaultSorter>
+        </th>
+        <th>
+            <mfDefaultSorter by="farea">Fixing Area</mfDefaultSorter>
+        </th>
+        <th>
+            <mfDefaultSorter by="mno">Machine Number</mfDefaultSorter>
+        </th>
+        <th>
+            <mfDefaultSorter by="mflag">Manual Received</mfDefaultSorter>
+        </th>
+        <th>
+            <mfDefaultSorter by="pressure">Pneumatic Pressure</mfDefaultSorter>
+        </th>
+        <th >
+            <mfDefaultSorter by="voltage">Voltage</mfDefaultSorter>
+        </th>
+        <th >
+            <mfDefaultSorter by="current">Current</mfDefaultSorter>
+        </th>
+        <th>
+            <mfDefaultSorter by="ideal">Ideal</mfDefaultSorter>
+        </th>
+        <th >
+            <mfDefaultSorter by="duration">PM Duration</mfDefaultSorter>
+        </th>
+        <th >
+            <mfDefaultSorter by="pmdate">Last PM Date</mfDefaultSorter>
+        </th>
+        <th >
+            <mfDefaultSorter by="type">Type</mfDefaultSorter>
+        </th>
+    </tr>
+</thead>
+
+    <tbody>
+    <tr *ngFor="let machine of mf.data">
+        <td>{{machine.sno     }} </td>
+        <td>{{machine.mname   }} </td>
+        <td>{{machine.myear   }} </td>
+        <td>{{machine.date    }} </td>
+        <td>{{machine.farea   }} </td>
+        <td>{{machine.mno     }} </td>
+        <td>{{machine.mflag   }} </td>
+        <td>{{machine.pressure}} </td>
+        <td>{{machine.voltage }} </td>
+        <td>{{machine.current }} </td>
+        <td>{{machine.ideal   }} </td>
+        <td>{{machine.duration}} </td>
+        <td>{{machine.pmdate  }} </td>
+        <td>{{machine.type    }} </td>
+                    
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+        <td colspan="15">
+            <mfBootstrapPaginator [rowsOnPageSet]="[5,10,25]"></mfBootstrapPaginator>
+        </td>
+    </tr>
+    </tfoot>
+  </table>

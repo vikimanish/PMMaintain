@@ -1,0 +1,44 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~font-awesome/css/font-awesome.css";
+
+.header__bg {
+   
+    background-color:#ff9d2f;
+    
+  }
+
+  .navbar-header
+  {
+    position:absolute;
+  }
+  .navbar-brand>img
+  {
+    display: block;
+    position: absolute;
+    top: 10px;
+  }
+  .navbar-nav
+  {
+    flex-direction: row;
+  }
+  .navbar-nav>li
+  {
+    padding:10px;
+  }
+
+  a{
+    color: #020202 !important;
+    font-size: 13px;
+  }
+
+  .text-nowrap{
+    font-size:10px !important; 
+}
+.modal-backdrop.fade
+   {
+     opacity: 0.5;
+   }
+   .modal-open .modal
+   {
+     opacity: 1;
+   }
